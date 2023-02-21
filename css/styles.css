@@ -437,6 +437,61 @@ body {
 }
 .footer-social-icon {
 }
+.subscribe {
+  margin-left: 80px;
+}
+.subscribe-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.subscribe-form {
+  display: flex;
+}
+.subscribe-form-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  background-color: #2e2f42;
+}
+.subscribe-form-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscribe-form-submit {
+  color: var(--hero-color);
+  background: var(--background-second-btn-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  width: 165px;
+  height: 40px;
+  padding: 8px 64px 8px 24px;
+  margin-top: 0;
+  margin-left: 24px;
+  transition: background var(--transition-duration-and-funk);
+}
+.subscribe-form-submit:is(:hover, :focus) {
+  background: var(--hover-color);
+}
+.subscribe-form-submit-wrapper {
+  position: relative;
+}
+.subscribe-btn-icon {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  transition: fill var(--transition-duration-and-funk);
+}
 /*------------------- EXAMPLES and GALLERY----------------- */
 .examples {
   padding-top: 96px;
@@ -560,6 +615,10 @@ body {
   width: 408px;
   height: 576px;
   background-color: #fcfcfc;
+  padding-top: 72px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
 }
 .modal-close-btn {
   position: absolute;
@@ -589,4 +648,124 @@ body {
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
   fill: var(--hover-main-btn-color);
+}
+/*------------------- MODAL FORM----------------- */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+.modal-form-field {
+  margin-bottom: 8px;
+}
+
+.modal-form-input-desc {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #8e8f99;
+}
+.modal-form-input-wrapper {
+  position: relative;
+  display: block;
+}
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 38px;
+  transition: border-color var(--transition-duration-and-funk);
+}
+.modal-form-input:focus {
+  border-color: #4d5ae5;
+  outline: none;
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: #4d5ae5;
+}
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill var(--transition-duration-and-funk);
+}
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 8px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--transition-duration-and-funk);
+}
+.modal-form-message::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-message:focus {
+  border-color: #4d5ae5;
+  outline: none;
+}
+.modal-form-check {
+}
+.modal-form-check:checked + .modal-form-check-desc::before {
+  background-color: #404bbf;
+  border: 1.25px solid #404bbf;
+  background-image: url(../images/click.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 10px 8px;
+  background-position: 50% 50%;
+}
+.modal-form-check:focus + .modal-form-check-desc::before {
+  outline: 1.25px solid #000000;
+}
+.modal-form-check-desc::before {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  content: '';
+  cursor: pointer;
+  margin-right: 8px;
+}
+.modal-form-check-desc {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #757575;
+  margin-bottom: 24px;
+  margin-top: 16px;
+}
+.modal-form-submit {
+  color: var(--hero-color);
+  align-self: center;
+  background: var(--background-second-btn-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  width: 169px;
+  padding: 16px 32px;
+  margin-top: 0;
+  transition: background var(--transition-duration-and-funk);
+}
+.modal-form-submit:is(:hover, :focus) {
+  background: var(--hover-color);
 }
